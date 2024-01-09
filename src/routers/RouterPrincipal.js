@@ -49,6 +49,14 @@ export const RouterPrincipal = () => {
                         className={ ({isActive}) => isActive ? "activado": ""}
                     >Panel de control</NavLink>
                 </li>
+
+                <li>
+                    <NavLink 
+                        to='/persona'
+                        className={ ({isActive}) => isActive ? "activado": ""}
+                    >Persona</NavLink>
+                </li>
+
             </ul>
         </nav>
         <hr/>
@@ -66,8 +74,8 @@ export const RouterPrincipal = () => {
             <Route path='/panel/*' element={<PanelControl/>}>
                 <Route index element={<InicioPanel/>}/>
                 <Route path='inicio' element={<InicioPanel/>}/>
-                <Route path='gestion-usuarios' element={<Crear/>}/>
-                <Route path='crear-articulos' element={<Gestion/>}/>
+                <Route path='gestion-usuarios' element={<Gestion/>}/>
+                <Route path='crear-articulos' element={<Crear/>}/>
                 <Route path='acerca-de' element={<Acerca/>}/>
             </Route>
             <Route path='*' element={<Error/>}/>

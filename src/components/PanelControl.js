@@ -9,16 +9,24 @@ export const PanelControl = () => {
         <nav>
             <ul>
                 <li>
-                    <NavLink to='/panel/inicio'>Inicio</NavLink>
+                    <NavLink to='/panel/inicio' 
+                    className={ ({isActive}) => isActive ? "activado": ""}
+                    >Inicio</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/panel/crear-articulos'>Crear articulos</NavLink>
+                    <NavLink to='/panel/crear-articulos'
+                    className={ ({isActive}) => isActive ? "activado": ""}
+                    >Crear articulos</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/panel/gestion-usuarios'>Gestion de usuarios</NavLink>
+                    <NavLink to='/panel/gestion-usuarios'
+                    className={ ({isActive}) => isActive ? "activado": ""}
+                    >Gestion de usuarios</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/panel/acerca-de'>Acerca de</NavLink>
+                    <NavLink to='/panel/acerca-de'
+                    className={ ({isActive}) => isActive ? "activado": ""}
+                    >Acerca de</NavLink>
                 </li>
 
             </ul>
